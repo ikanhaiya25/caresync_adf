@@ -32,7 +32,7 @@
 				}
 			},
 			{
-				"name": "ForEach1",
+				"name": "Ingest All Tables",
 				"type": "ForEach",
 				"dependsOn": [
 					{
@@ -44,6 +44,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@activity('Read Source Tables List').output.value",
+						"type": "Expression"
+					},
 					"activities": [
 						{
 							"name": "Set variable1",
